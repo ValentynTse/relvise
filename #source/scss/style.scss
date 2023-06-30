@@ -7,13 +7,13 @@ body {
    font-size: 0.875rem;
    font-weight: 500;
    color: $main-text-color;
+   background-color: $light-bgd-color;
 }
 .wrapper {
    min-height: 100%;
    overflow: hidden;
    display: flex;
    flex-direction: column;
-   background-color: $light-bgd-color;
 }
 [class*="__container"] {
    max-width: 67.5rem;
@@ -29,6 +29,7 @@ body {
       max-width: none;
    }
 }
+
 //===========HEADER============//
 .header {
    position: absolute;
@@ -81,10 +82,10 @@ body {
    }
 }
 
+//================PAGES=============//
 .page {
    flex: 1 1 auto;
 }
-
 .page {
    &__main-block {
    }
@@ -98,7 +99,37 @@ body {
 }
 .page {
    &__designing {
-      padding: 5rem 0;
+   }
+}
+.page {
+   &__practice {
+   }
+}
+
+//=============HEADER-BLOCK===========//
+.header-block {
+   text-align: center;
+   &__title {
+      font-size: 40px;
+      @media (max-width: 992px) {
+         font-size: 36px;
+      }
+      @media (max-width: 768px) {
+         font-size: 30px;
+      }
+      font-weight: 700;
+      line-height: 142.5%; /* 57px/40 */
+      letter-spacing: 0.2px;
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 142.857143%; /* 20px/14 */
+      letter-spacing: 0.2px;
+      color: $dark-text-color;
    }
 }
 
@@ -106,6 +137,8 @@ body {
 .main-block {
    position: relative;
    &__body {
+      position: relative;
+      z-index: 2;
       max-width: 25rem;
       padding: 11.5rem 0 11.9375rem;
       @media (max-width: 30rem) {
@@ -257,7 +290,148 @@ body {
       background-color: $secondary-color;
       color: $light-text-color;
       p {
-         color: #fff;
+         color: $light-text-color;
+      }
+   }
+}
+//===============DESIGNING===============//
+
+.designing {
+   padding: 80px 0;
+   @media (max-width: 992px) {
+      padding: 50px 0;
+   }
+   @media (max-width: 768px) {
+      padding: 30px 0;
+   }
+   &__container {
+   }
+   &__header {
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+         margin-bottom: 25px;
+      }
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px -30px;
+   }
+   &__column {
+      padding: 0 15px;
+      margin-bottom: 30px;
+      flex: 0 1 25%;
+      @media (max-width: 1200px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 520px) {
+         flex: 0 1 100%;
+      }
+   }
+   &__item {
+      height: 100%;
+      background-color: $white-bgd-color;
+      padding: 30px;
+      text-align: center;
+      > *:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__icon {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__value {
+      font-size: 40px;
+      line-height: 142.5%; /* 57px/40 */
+      font-weight: 700;
+      letter-spacing: 0.2px;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 150%; /* 24px/16 */
+      font-weight: 700;
+      letter-spacing: 0.1px;
+   }
+}
+
+//=====================PRACTICE===============//
+
+.practice {
+   padding: 80px 0;
+   &__container {
+   }
+   &__header {
+      margin-bottom: 45px;
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px -40px;
+   }
+   &__column {
+      padding: 0 20px;
+      margin-bottom: 40px;
+      flex: 0 1 25%;
+      @media (max-width: 1200px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 520px) {
+         flex: 0 1 100%;
+      }
+   }
+   &__item {
+   }
+}
+.item-practice {
+   background-color: $white-bgd-color;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   &__content {
+      flex: 1 1 auto;
+      padding: 30px;
+   }
+   &__link {
+      display: inline-block;
+      color: inherit;
+      margin-bottom: 15px;
+      &:hover {
+         text-decoration: underline;
+         cursor: pointer;
+      }
+   }
+   &__title {
+      font-size: 16px;
+      line-height: 150%; /* 24px/16 */
+      font-weight: 700;
+      letter-spacing: 0.1px;
+   }
+   &__text {
+      font-weight: 500;
+      line-height: 142.857143%; /* 20px/14 */
+      letter-spacing: 0.2px;
+      color: $dark-text-color;
+   }
+   &__image {
+      padding-bottom: 60%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         transform: scale(1.1);
+      }
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
       }
    }
 }
