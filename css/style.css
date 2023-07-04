@@ -280,15 +280,6 @@ body {
   background-color: #FF7B47;
   color: #FFFFFF;
 }
-.main-block__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 .main-block__image_ibg img {
   position: absolute;
   width: 100%;
@@ -1033,10 +1024,10 @@ body {
   text-decoration: underline;
 }
 .contacts-footer__item_phone {
-  background: url("/img/footer/phone.svg") left no-repeat;
+  background: url("../img/footer/phone.svg") left no-repeat;
 }
 .contacts-footer__item_map {
-  background: url("/img/footer/map.svg") left no-repeat;
+  background: url("../img/footer/map.svg") left no-repeat;
   white-space: nowrap;
   max-width: 12.8125rem;
   overflow: hidden;
@@ -1044,7 +1035,7 @@ body {
   text-overflow: ellipsis;
 }
 .contacts-footer__item_email {
-  background: url("/img/footer/send.svg") left no-repeat;
+  background: url("../img/footer/send.svg") left no-repeat;
 }
 
 .bottom-footer__body {
