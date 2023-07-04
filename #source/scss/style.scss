@@ -87,10 +87,6 @@ body {
    flex: 1 1 auto;
 }
 .page {
-   &__main-block {
-   }
-}
-.page {
    &__services {
       position: relative;
       z-index: 3;
@@ -98,30 +94,10 @@ body {
    }
 }
 .page {
-   &__designing {
-   }
-}
-.page {
-   &__practice {
-   }
-}
-.page {
-   &__who {
-   }
-}
-.page {
    &__clients {
       &:not(:last-child) {
-         margin-bottom: 20px;
+         margin-bottom: 1.25rem;
       }
-   }
-}
-.page {
-   &__subscribe {
-   }
-}
-.page {
-   &__get {
    }
 }
 
@@ -129,25 +105,25 @@ body {
 .header-block {
    text-align: center;
    &__title {
-      font-size: 40px;
-      @media (max-width: 992px) {
-         font-size: 36px;
+      font-size: 2.5rem;
+      @media (max-width: 62rem) {
+         font-size: 2.25rem;
       }
-      @media (max-width: 768px) {
-         font-size: 30px;
+      @media (max-width: 48rem) {
+         font-size: 1.875rem;
       }
       font-weight: 700;
       line-height: 142.5%; /* 57px/40 */
-      letter-spacing: 0.2px;
+      letter-spacing: 0.0125rem;
       &:not(:last-child) {
-         margin-bottom: 10px;
+         margin-bottom: 0.625rem;
       }
    }
    &__subtitle {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 500;
       line-height: 142.857143%; /* 20px/14 */
-      letter-spacing: 0.2px;
+      letter-spacing: 0.0125rem;
       color: $dark-text-color;
    }
 }
@@ -374,7 +350,7 @@ body {
 
 //=====================PRACTICE===============//
 .practice {
-   padding: 5rem 0;
+   padding: 7.8125rem 0 5rem;
    @media (max-width: 62rem) {
       padding: 3.125rem 0;
    }
@@ -455,7 +431,7 @@ body {
 //=================WHO===============//
 .who {
    background-color: $white-bgd-color;
-   padding: 5rem 0 8.125rem;
+   padding: 6.25rem 0 8.125rem;
    @media (max-width: 62rem) {
       padding: 3.125rem 0;
    }
@@ -652,7 +628,7 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      border-radius: 0px 0.3125rem 0.3125rem 0px;
+      border-radius: 0px 5px 5px 0px;
       border: 1px solid #e6e6e6;
       padding: 0.9375rem 1.4063rem;
       background-color: $primary-color;
@@ -667,8 +643,14 @@ body {
 //==============GET==========//
 .get {
    padding: 5rem 0 9.25rem;
+   @media (max-width: 30rem) {
+      padding: 3.125rem 0;
+   }
    &__header {
-      margin-bottom: 6.875rem;
+      margin-bottom: 5rem;
+      @media (max-width: 30rem) {
+         margin-bottom: 2.5rem;
+      }
    }
    &__body {
       @media (min-width: 62rem) {
@@ -746,7 +728,7 @@ body {
       min-height: 2.75rem;
       text-align: center;
       padding: 0.625rem 1.25rem;
-      border-radius: 0.3125rem;
+      border-radius: 5px;
       border: 1px solid $primary-color;
       color: $primary-color;
       font-size: 0.875rem;
@@ -757,6 +739,202 @@ body {
       &:hover {
          color: $light-text-color;
          background-color: $primary-color;
+      }
+   }
+}
+
+//=============CONTACT============//
+.contact {
+   background-color: $white-bgd-color;
+   padding: 2.5rem 0;
+   @media (max-width: 48rem) {
+      padding: 1.25rem;
+   }
+   &__body {
+      display: flex;
+      @media (max-width: 48rem) {
+         flex-direction: column;
+         gap: 1.25rem;
+         text-align: center;
+      }
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__title {
+      font-size: 1.5rem;
+      line-height: 133.333333%; /* 32px/24 */
+      font-weight: 700;
+      letter-spacing: 0.0063rem;
+      &:not(:last-child) {
+         margin-bottom: 0.625rem;
+      }
+   }
+   &__text {
+      font-weight: 500;
+      line-height: 142.857143%; /* 20px/14 */
+      letter-spacing: 0.0125rem;
+      color: $dark-text-color;
+   }
+   &__button {
+      margin-right: 2.5rem;
+      @media (max-width: 48rem) {
+         margin: 0;
+      }
+      @media (max-width: 30rem) {
+         width: 100%;
+         font-size: 1.25rem;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 3.625rem;
+      text-align: center;
+      padding: 0.3125rem 2.5rem;
+      border-radius: 5px;
+      background-color: $primary-color;
+      color: $light-text-color;
+      font-weight: 700;
+      line-height: 200%; /* 28px/14 */
+      letter-spacing: 0.0125rem;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background-color: #bb5b35;
+      }
+   }
+}
+
+//=================FOOTER=============//
+.footer {
+   &__top {
+      padding: 2.1875rem 0;
+      background-color: $extra-dark-bgd-color;
+   }
+}
+.top-footer {
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.9375rem;
+   }
+   &__column {
+      padding: 0.9375rem 0.9375rem;
+      flex: 0 1 16.66%;
+      &:last-child {
+         flex: 0 1 33.333%;
+      }
+      @media (max-width: 75rem) {
+         flex: 0 1 25%;
+         &:last-child {
+            flex: 0 1 100%;
+         }
+      }
+      @media (max-width: 48rem) {
+         flex: 0 1 50%;
+         &:last-child {
+            flex: 0 1 100%;
+         }
+      }
+      @media (max-width: 30rem) {
+         min-width: 100%;
+         &:not(:last-child) {
+            text-align: center;
+         }
+      }
+   }
+   &__label {
+      font-size: 1rem;
+      line-height: 150%; /* 24px/16 */
+      font-weight: 700;
+      letter-spacing: 0.0063rem;
+      color: $light-text-color;
+      &:not(:last-child) {
+         margin-bottom: 1.25rem;
+      }
+   }
+}
+.menu-footer {
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: 0.625rem;
+      }
+   }
+   &__link {
+      font-weight: 600;
+      line-height: 171.428571%; /* 24px/14 */
+      letter-spacing: 0.0125rem;
+      color: $light-text-color;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+.contacts-footer {
+   display: flex;
+   flex-direction: column;
+
+   &__item {
+      min-height: 1.875rem;
+      font-weight: 600;
+      line-height: 171.428571%; /* 24px/14 */
+      letter-spacing: 0.0125rem;
+      padding-left: 2.125rem;
+      color: $light-text-color;
+      &:not(:last-child) {
+         margin-bottom: 0.625rem;
+      }
+      &:hover {
+         text-decoration: underline;
+      }
+      &_phone {
+         background: url("/img/footer/phone.svg") left no-repeat;
+      }
+      &_map {
+         background: url("/img/footer/map.svg") left no-repeat;
+         white-space: nowrap;
+         max-width: 12.8125rem;
+         overflow: hidden;
+         cursor: pointer;
+         text-overflow: ellipsis;
+      }
+      &_email {
+         background: url("/img/footer/send.svg") left no-repeat;
+      }
+   }
+}
+.bottom-footer {
+   &__body {
+      padding: 1.5625rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 48rem) {
+         flex-direction: column;
+      }
+   }
+   &__copy {
+      font-weight: 600;
+      line-height: 171.428571%; /* 24px/14 */
+      letter-spacing: 0.0125rem;
+      color: $dark-text-color;
+      @media (max-width: 48rem) {
+         margin-bottom: 1.25rem;
+      }
+      @media (max-width: 30rem) {
+         text-align: center;
+      }
+   }
+}
+.socials {
+   display: flex;
+   align-items: center;
+   &__link {
+      &:not(:last-child) {
+         margin-right: 1.25rem;
+      }
+      img {
+         vertical-align: middle;
+         max-width: 100%;
       }
    }
 }
